@@ -4,12 +4,22 @@ on:
   push:
     branches: [ main ]
 
-jobs:
-  build-and-test:
-    runs-on: ubuntu-latest
+stages:
+  - build
+  - test
+  - deploy
 
-    steps:
-      - uses: actions/checkout@v3
+build-job:
+  stage: build
+  script:
+    - echo "Building the 'Hello World' app"
 
-      - name: Run tests (replace with your actual tests)
-        run: echo "Running tests..."  #later
+test-job:
+  stage: test
+  script:
+    - echo "Testing the 'Hello World' app"
+
+deploy-job:
+  stage: deploy
+  script:
+    - echo "Deploying the 'Hello World' app"
