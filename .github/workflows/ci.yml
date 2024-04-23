@@ -11,10 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3 #check's out code from repository
 
-      - name: Run tests
-        run: echo "Running tests..."  #later
+      - name: Run tests 
+        run: echo "Running tests..."  # Replace with your testing commands
 
-deploy-job:
-  stage: deploy
-  script:
-    - echo "Deploying the 'Hello World' app"
