@@ -1,0 +1,18 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run build script (optional)
+        run: ./build.sh
+
+      - name: Run tests (replace with your actual tests)
+        run: echo "Running tests..."  # Replace with your testing commands
