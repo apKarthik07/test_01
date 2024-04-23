@@ -11,8 +11,5 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Run build script (optional)
-        run: ./build.sh
-
       - name: Run tests (replace with your actual tests)
-        run: echo "Running tests..."  # Replace with your testing commands
+        run: echo "Running tests..."  #later
