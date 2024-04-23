@@ -4,20 +4,15 @@ on:
   push:
     branches: [ main ]
 
-stages:
-  - build
-  - test
-  - deploy
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest #virtual machine
 
-build-job:
-  stage: build
-  script:
-    - echo "Building the 'Hello World' app"
+    steps:
+      - uses: actions/checkout@v3 #check's out code from repository
 
-test-job:
-  stage: test
-  script:
-    - echo "Testing the 'Hello World' app"
+      - name: Run tests
+        run: echo "Running tests..."  #later
 
 deploy-job:
   stage: deploy
